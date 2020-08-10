@@ -2,6 +2,7 @@
   "name": "myapp",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/myapp",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
