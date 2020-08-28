@@ -24,13 +24,18 @@
 		</v-img>
 		<v-content class="text-center" tag="h1">
 			Choose between the best beers
+			<BeerCards />
 		</v-content>
 	</div>
 </template>
 
 <script>
+import BeerCards from '@/components/BeerCards.vue';
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
+  components: {
+	BeerCards,
+  }
 }
 </script>
 
