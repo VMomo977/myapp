@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<v-app-bar fix dense>
-			 <v-toolbar-title>
+			<v-toolbar-title>
 				Beer Factory 
 			</v-toolbar-title>
 			<v-spacer/>
