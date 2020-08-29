@@ -1,21 +1,46 @@
 <template>
 	<div>
-		Beers
-		<v-flex v-if="beers"
-			class="d-flex align-items flex wrap"
+		<v-card
+			class="d-flex flex-wrap"
+			flat		
 		>
 			<v-card v-for="beer in beers" :key="beer.id"
+				class="mx-auto mt-auto mb-auto text-center"
+				height="400"
+				width="200"
 			>
 				<v-img
 						:src="beer.image_url"
-					/>
-					{{  beer.name }} <br/>
-					{{  beer.tagline }} <br/>
-					{{  beer.abv  }} % <br/>
-					{{ beer.volume.value }} x {{ beer.boil_volume.value }} ( {{ beer.boil_volume.unit }} )
-
+						width="200" height="200" contain
+				/>
+				<v-content
+					tag="h3"
+				>
+					{{  beer.name }} 
+				</v-content>
+				<v-text>
+					<span 
+						class="black--text"
+					>
+						{{  beer.tagline }} <br/>
+					</span>
+					<span 
+						class="brown--text"
+					> 
+						{{  beer.abv  }} % <br/>
+						{{ beer.volume.value }} x {{ beer.boil_volume.value }} ( {{ beer.boil_volume.unit }} )
+					</span>
+				</v-text>
+				<v-card-actions>
+					<v-btn
+						dark
+						class="white--text"
+					>
+						Buy me
+					</v-btn>
+				</v-card-actions>
 			</v-card>
-	</v-flex> 
+		</v-card> 
 	</div>
 </template>
 

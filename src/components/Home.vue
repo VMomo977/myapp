@@ -24,8 +24,9 @@
 		</v-img>
 		<v-content class="text-center" tag="h1">
 			Choose between the best beers
-			<BeerCards />
 		</v-content>
+		<BeerCards />
+		You can select here something in the future
 	</div>
 </template>
 
