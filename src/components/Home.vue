@@ -1,5 +1,5 @@
 <template>
-	<div class="hello">
+	<div>
 		<v-img 
 			src="https://images.unsplash.com/photo-1549063729-f02aba455bda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
 			:min-width="'calc(100vh - ' + $vuetify.application.width + 'px)'"
@@ -22,20 +22,22 @@
 				</v-row>
 			</v-container>
 		</v-img>
-		<v-content class="text-center" tag="h1">
+		<v-content class="text-center mt-8 mb-8" tag="h1">
 			Choose between the best beers
 		</v-content>
 		<BeerCards />
-		You can select here something in the future
+		<RandomBeer />
 	</div>
 </template>
 
 <script>
 import BeerCards from '@/components/BeerCards.vue';
+import RandomBeer from '@/components/RandomBeer.vue';
 export default {
   name: 'Home',
   components: {
 	BeerCards,
+	RandomBeer,
   }
 }
 </script>
