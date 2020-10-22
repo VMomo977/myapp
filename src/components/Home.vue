@@ -27,17 +27,21 @@
 		</v-content>
 		<BeerCards />
 		<RandomBeer />
+		<BeerSelect />
 	</div>
 </template>
 
 <script>
 import BeerCards from '@/components/BeerCards.vue';
 import RandomBeer from '@/components/RandomBeer.vue';
+import BeerSelect from '@/components/BeerSelect.vue';
+
 export default {
   name: 'Home',
   components: {
 	BeerCards,
 	RandomBeer,
+	BeerSelect,
   }
 }
 </script>

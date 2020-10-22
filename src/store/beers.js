@@ -4,6 +4,7 @@ export default {
 	state: {
 		beerItems: [],
 		beerRandom: null,
+		beerQuery: [],
 	}, 
 	mutations: {
 		SET_BEERS(state, beers) {
@@ -11,6 +12,9 @@ export default {
 		},
 		SET_RANDOM_BEER(state, beer) {
 			state.beerRandom = beer;
+		},
+		SET_BEER_QUERY(state, beers) {
+			state.beerQuery = beers;
 		},
 	},
 	actions: {
@@ -23,6 +27,11 @@ export default {
 			const response = await axios.get('https://api.punkapi.com/v2/beers/random');
 			const beer = response.data;
 			commit('SET_RANDOM_BEER', beer[0]);
+		},
+		async loadBeerQuery({ commit }, queryString) {
+			const response = await axios.get(`https://api.punkapi.com/v2/beers${queryString}`);
+			const beers = response.data;
+			commit('SET_BEER_QUERY', beers);
 		},
 	},
 };
